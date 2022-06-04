@@ -2,6 +2,12 @@ Public Class Form1
     Dim movement As New Point(0, 0)
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
 
+        ' Create timer 
+        'thanks tutlane
+        Dim timer As Timer = New Timer()
+
+        timer.Start()
+
         If e.KeyCode = Keys.Up Then
             pbHero.Top = pbHero.Top - 10
         End If
@@ -82,6 +88,7 @@ Public Class Form1
             pbHero.Visible = False
             MessageBox.Show("GAME OVER")
             Application.Exit()
+
         End If
         If pbHero.Bounds.IntersectsWith(pbChaser.Bounds) Then
             pbHero.Visible = False
@@ -94,27 +101,23 @@ Public Class Form1
             MessageBox.Show("YOU WIN")
             Application.Exit()
         End If
-        Dim 
-        If pbChaser Then
-    End Sub
 
-    Function Collision(ByVal Object1 As Object, ByVal Object2 As Object) As Boolean
-        Dim Collided As Boolean = False
-        If Object1.Top + Object1.Height >= Object2.Top And
-                Object2.Top + Object2.Height >= Object1.Top And
-                Object1.Left + Object1.Width >= Object2.Left And
-                Object2.Left And Object2.Width >= Object1.Left Then
-            Collided = True
+
+
+
+
+        If timer.Interval = 1 Then
+            pbChaser.Top = pbChaser.Top - 100
         End If
-        Return Collided
-    End Function
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim pos_y As Double
-        Dim pos_x As Double
-
-
-
-
+        timer.Stop()
     End Sub
+
+
+
+
+
+
+
+
 End Class
