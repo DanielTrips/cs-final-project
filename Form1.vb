@@ -2,12 +2,6 @@ Public Class Form1
     Dim movement As New Point(0, 0)
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
 
-        ' Create timer 
-        'thanks tutlane
-        Dim timer As Timer = New Timer()
-
-        timer.Start()
-
         If e.KeyCode = Keys.Up Then
             pbHero.Top = pbHero.Top - 10
         End If
@@ -88,7 +82,6 @@ Public Class Form1
             pbHero.Visible = False
             MessageBox.Show("GAME OVER")
             Application.Exit()
-
         End If
         If pbHero.Bounds.IntersectsWith(pbChaser.Bounds) Then
             pbHero.Visible = False
@@ -102,22 +95,108 @@ Public Class Form1
             Application.Exit()
         End If
 
-
-
-
-
-        If timer.Interval = 1 Then
-            pbChaser.Top = pbChaser.Top - 100
+        If pbHero.Bounds.IntersectsWith(PictureBox5.Bounds) Then
+            pbHero.Visible = False
+            MessageBox.Show("GAME OVER")
+            Application.Exit()
         End If
 
-        timer.Stop()
+
+    End Sub
+    Private Function checkCollision(heroguy As Object, chaserguy As Object) As Boolean
+        Return pbHero.Top + pbHero.Size.Height <= pbChaser.Top - pbChaser.Size.Height And
+            pbHero.Top - pbHero.Size.Height >= pbChaser.Top + pbChaser.Size.Height And
+           pbHero.Left + pbHero.Size.Width <= pbChaser.Left - pbChaser.Size.Width And
+          pbHero.Left + pbHero.Size.Width <= pbChaser.Left - pbChaser.Size.Width
+
+    End Function
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick, MyBase.KeyDown
+        Dim hero As Integer = pbHero.Top
+        Dim hero2 As Integer = pbHero.Left
+        Dim chaser As Integer = pbChaser.Top
+        Dim chaser2 As Integer = pbChaser.Left
+        Dim chaser3 As Integer = pbChasi.Top
+        Dim chaser4 As Integer = pbChasi.Left
+        Dim speed As Integer = 1
+
+        If hero > chaser Then
+            pbChaser.Top = pbChaser.Top + speed
+        ElseIf hero < chaser Then
+            pbChaser.Top = pbChaser.Top - speed
+        End If
+        If hero2 > chaser2 Then
+            pbChaser.Left = pbChaser.Left + speed
+        ElseIf hero2 < chaser2 Then
+            pbChaser.Left = pbChaser.Left - speed
+        End If
+
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox1.Bounds) Then
+            pbChaser.Left = pbChaser.Left - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox2.Bounds) Then
+            pbChaser.Top = pbChaser.Top - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox3.Bounds) Then
+            pbChaser.Top = pbChaser.Top - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox4.Bounds) Then
+            pbChaser.Top = pbChaser.Top - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox5.Bounds) Then
+            pbChaser.Left = pbChaser.Left - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox6.Bounds) Then
+            pbChaser.Top = pbChaser.Top - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox7.Bounds) Then
+            pbChaser.Top = pbChaser.Top - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox8.Bounds) Then
+            pbChaser.Top = pbChaser.Top - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox9.Bounds) Then
+            pbChaser.Left = pbChaser.Left - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox10.Bounds) Then
+            pbChaser.Left = pbChaser.Left - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox11.Bounds) Then
+            pbChaser.Top = pbChaser.Top - 1
+        End If
+
+        If pbChaser.Bounds.IntersectsWith(PictureBox13.Bounds) Then
+            pbChaser.Left = pbChaser.Left - 1
+        End If
     End Sub
 
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Dim hero As Integer = pbHero.Top
+        Dim hero2 As Integer = pbHero.Left
+        Dim chaser As Integer = pbChasi.Top
+        Dim chaser2 As Integer = pbChasi.Left
+        Dim speed As Integer = 1
 
-
-
-
-
-
-
+        If hero > chaser Then
+            pbChaser.Top = pbChaser.Top + speed
+        ElseIf hero < chaser Then
+            pbChaser.Top = pbChaser.Top - speed
+        End If
+        If hero2 > chaser2 Then
+            pbChaser.Left = pbChaser.Left + speed
+        ElseIf hero2 < chaser2 Then
+            pbChaser.Left = pbChaser.Left - speed
+        End If
+    End Sub
 End Class
+
