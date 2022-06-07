@@ -101,7 +101,11 @@ Public Class Form1
             Application.Exit()
         End If
 
-
+        If pbHero.Bounds.IntersectsWith(pbChasi.Bounds) Then
+            pbHero.Visible = False
+            MessageBox.Show("GAME OVER")
+            Application.Exit()
+        End If
     End Sub
     Private Function checkCollision(heroguy As Object, chaserguy As Object) As Boolean
         Return pbHero.Top + pbHero.Size.Height <= pbChaser.Top - pbChaser.Size.Height And
@@ -181,22 +185,21 @@ Public Class Form1
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Dim hero As Integer = pbHero.Top
-        Dim hero2 As Integer = pbHero.Left
-        Dim chaser As Integer = pbChasi.Top
-        Dim chaser2 As Integer = pbChasi.Left
+        Dim hero3 As Integer = pbHero.Top
+        Dim hero4 As Integer = pbHero.Left
+        Dim chasi As Integer = pbChasi.Top
+        Dim chasi2 As Integer = pbChasi.Left
         Dim speed As Integer = 1
 
-        If hero > chaser Then
+        If hero3 > chasi Then
             pbChaser.Top = pbChaser.Top + speed
-        ElseIf hero < chaser Then
+        ElseIf hero3 < chasi Then
             pbChaser.Top = pbChaser.Top - speed
         End If
-        If hero2 > chaser2 Then
+        If hero4 > chasi2 Then
             pbChaser.Left = pbChaser.Left + speed
-        ElseIf hero2 < chaser2 Then
+        ElseIf hero4 < chasi2 Then
             pbChaser.Left = pbChaser.Left - speed
         End If
     End Sub
 End Class
-
