@@ -41,7 +41,19 @@ Partial Class Form1
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.pbChasi = New System.Windows.Forms.PictureBox()
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerTheSecond = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
+        Me.pbChase = New System.Windows.Forms.PictureBox()
         CType(Me.pbHero, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,12 +71,24 @@ Partial Class Form1
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbChasi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbChase, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbHero
         '
         Me.pbHero.BackColor = System.Drawing.Color.Lime
-        Me.pbHero.Location = New System.Drawing.Point(746, 12)
+        Me.pbHero.Location = New System.Drawing.Point(1453, 15)
         Me.pbHero.Name = "pbHero"
         Me.pbHero.Size = New System.Drawing.Size(42, 40)
         Me.pbHero.TabIndex = 0
@@ -114,7 +138,7 @@ Partial Class Form1
         'pbWin
         '
         Me.pbWin.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.pbWin.Location = New System.Drawing.Point(-3, 377)
+        Me.pbWin.Location = New System.Drawing.Point(12, 377)
         Me.pbWin.Name = "pbWin"
         Me.pbWin.Size = New System.Drawing.Size(76, 70)
         Me.pbWin.TabIndex = 5
@@ -141,9 +165,9 @@ Partial Class Form1
         'PictureBox8
         '
         Me.PictureBox8.BackColor = System.Drawing.Color.Red
-        Me.PictureBox8.Location = New System.Drawing.Point(219, 306)
+        Me.PictureBox8.Location = New System.Drawing.Point(232, 322)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(400, 43)
+        Me.PictureBox8.Size = New System.Drawing.Size(387, 27)
         Me.PictureBox8.TabIndex = 8
         Me.PictureBox8.TabStop = False
         '
@@ -168,7 +192,7 @@ Partial Class Form1
         'pbChaser
         '
         Me.pbChaser.BackColor = System.Drawing.Color.Maroon
-        Me.pbChaser.Location = New System.Drawing.Point(12, 12)
+        Me.pbChaser.Location = New System.Drawing.Point(12, 15)
         Me.pbChaser.Name = "pbChaser"
         Me.pbChaser.Size = New System.Drawing.Size(42, 40)
         Me.pbChaser.TabIndex = 11
@@ -179,7 +203,7 @@ Partial Class Form1
         Me.PictureBox5.BackColor = System.Drawing.Color.Red
         Me.PictureBox5.Location = New System.Drawing.Point(392, 441)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(54, 59)
+        Me.PictureBox5.Size = New System.Drawing.Size(54, 30)
         Me.PictureBox5.TabIndex = 12
         Me.PictureBox5.TabStop = False
         '
@@ -219,16 +243,136 @@ Partial Class Form1
         Me.pbChasi.TabIndex = 16
         Me.pbChasi.TabStop = False
         '
-        'Timer2
+        'TimerTheSecond
         '
-        Me.Timer2.Enabled = True
-        Me.Timer2.Interval = 1
+        Me.TimerTheSecond.Enabled = True
+        Me.TimerTheSecond.Interval = 1
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.BackColor = System.Drawing.Color.Red
+        Me.PictureBox14.Location = New System.Drawing.Point(818, 52)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(54, 120)
+        Me.PictureBox14.TabIndex = 17
+        Me.PictureBox14.TabStop = False
+        '
+        'PictureBox15
+        '
+        Me.PictureBox15.BackColor = System.Drawing.Color.Red
+        Me.PictureBox15.Location = New System.Drawing.Point(869, 129)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(202, 43)
+        Me.PictureBox15.TabIndex = 18
+        Me.PictureBox15.TabStop = False
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.BackColor = System.Drawing.Color.Red
+        Me.PictureBox16.Location = New System.Drawing.Point(869, 257)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(339, 43)
+        Me.PictureBox16.TabIndex = 19
+        Me.PictureBox16.TabStop = False
+        '
+        'PictureBox17
+        '
+        Me.PictureBox17.BackColor = System.Drawing.Color.Red
+        Me.PictureBox17.Location = New System.Drawing.Point(818, 257)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(54, 162)
+        Me.PictureBox17.TabIndex = 20
+        Me.PictureBox17.TabStop = False
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.BackColor = System.Drawing.Color.Red
+        Me.PictureBox18.Location = New System.Drawing.Point(1298, 129)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(54, 318)
+        Me.PictureBox18.TabIndex = 21
+        Me.PictureBox18.TabStop = False
+        '
+        'PictureBox19
+        '
+        Me.PictureBox19.BackColor = System.Drawing.Color.Red
+        Me.PictureBox19.Location = New System.Drawing.Point(1047, 404)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(54, 144)
+        Me.PictureBox19.TabIndex = 22
+        Me.PictureBox19.TabStop = False
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.BackColor = System.Drawing.Color.Red
+        Me.PictureBox20.Location = New System.Drawing.Point(-3, -1)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(1518, 10)
+        Me.PictureBox20.TabIndex = 23
+        Me.PictureBox20.TabStop = False
+        '
+        'PictureBox21
+        '
+        Me.PictureBox21.BackColor = System.Drawing.Color.Red
+        Me.PictureBox21.Location = New System.Drawing.Point(1501, -1)
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.Size = New System.Drawing.Size(14, 549)
+        Me.PictureBox21.TabIndex = 24
+        Me.PictureBox21.TabStop = False
+        '
+        'PictureBox22
+        '
+        Me.PictureBox22.BackColor = System.Drawing.Color.Red
+        Me.PictureBox22.Location = New System.Drawing.Point(-3, 538)
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.Size = New System.Drawing.Size(1518, 10)
+        Me.PictureBox22.TabIndex = 25
+        Me.PictureBox22.TabStop = False
+        '
+        'PictureBox23
+        '
+        Me.PictureBox23.BackColor = System.Drawing.Color.Red
+        Me.PictureBox23.Location = New System.Drawing.Point(-3, -1)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(14, 549)
+        Me.PictureBox23.TabIndex = 26
+        Me.PictureBox23.TabStop = False
+        '
+        'PictureBox24
+        '
+        Me.PictureBox24.BackColor = System.Drawing.Color.Red
+        Me.PictureBox24.Location = New System.Drawing.Point(1154, -1)
+        Me.PictureBox24.Name = "PictureBox24"
+        Me.PictureBox24.Size = New System.Drawing.Size(54, 120)
+        Me.PictureBox24.TabIndex = 27
+        Me.PictureBox24.TabStop = False
+        '
+        'pbChase
+        '
+        Me.pbChase.BackColor = System.Drawing.Color.Maroon
+        Me.pbChase.Location = New System.Drawing.Point(1453, 492)
+        Me.pbChase.Name = "pbChase"
+        Me.pbChase.Size = New System.Drawing.Size(42, 40)
+        Me.pbChase.TabIndex = 28
+        Me.pbChase.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(922, 547)
+        Me.ClientSize = New System.Drawing.Size(1527, 545)
+        Me.Controls.Add(Me.pbChase)
+        Me.Controls.Add(Me.PictureBox24)
+        Me.Controls.Add(Me.PictureBox23)
+        Me.Controls.Add(Me.PictureBox22)
+        Me.Controls.Add(Me.PictureBox21)
+        Me.Controls.Add(Me.PictureBox20)
+        Me.Controls.Add(Me.PictureBox19)
+        Me.Controls.Add(Me.PictureBox18)
+        Me.Controls.Add(Me.PictureBox17)
+        Me.Controls.Add(Me.PictureBox16)
+        Me.Controls.Add(Me.PictureBox15)
+        Me.Controls.Add(Me.PictureBox14)
         Me.Controls.Add(Me.pbChasi)
         Me.Controls.Add(Me.PictureBox13)
         Me.Controls.Add(Me.PictureBox12)
@@ -265,6 +409,18 @@ Partial Class Form1
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbChasi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbChase, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -287,5 +443,18 @@ Partial Class Form1
     Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents PictureBox13 As PictureBox
     Friend WithEvents pbChasi As PictureBox
-    Friend WithEvents Timer2 As Timer
+    Friend WithEvents TimerTheSecond As Timer
+    Friend WithEvents PictureBox14 As PictureBox
+    Friend WithEvents PictureBox15 As PictureBox
+    Friend WithEvents PictureBox16 As PictureBox
+    Friend WithEvents PictureBox17 As PictureBox
+    Friend WithEvents PictureBox18 As PictureBox
+    Friend WithEvents PictureBox19 As PictureBox
+    Friend WithEvents PictureBox20 As PictureBox
+    Friend WithEvents PictureBox21 As PictureBox
+    Friend WithEvents PictureBox22 As PictureBox
+    Friend WithEvents PictureBox23 As PictureBox
+    Friend WithEvents PictureBox24 As PictureBox
+    Friend WithEvents pbChase As PictureBox
 End Class
+
