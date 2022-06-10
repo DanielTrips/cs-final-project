@@ -186,6 +186,18 @@ Public Class Form1
             Application.Exit()
         End If
 
+        If pbHero.Bounds.IntersectsWith(pbChace.Bounds) Then
+            pbHero.Visible = False
+            MessageBox.Show("GAME OVER")
+            Application.Exit()
+        End If
+
+        If pbHero.Bounds.IntersectsWith(pbChaze.Bounds) Then
+            pbHero.Visible = False
+            MessageBox.Show("GAME OVER")
+            Application.Exit()
+        End If
+
         'if player hits the blue box they win
         If pbHero.Bounds.IntersectsWith(pbWin.Bounds) Then
             pbHero.Visible = False
@@ -208,7 +220,7 @@ Public Class Form1
         Dim hero As Integer = pbHero.Top
         Dim hero2 As Integer = pbHero.Left
         Dim speed As Double = 1
-        Dim chasers() As Object = {pbChaser, pbChasi, pbChase}
+        Dim chasers() As Object = {pbChaser, pbChasi, pbChase, pbChace, pbChaze}
         For index As Integer = 0 To chasers.Length - 1
             Dim thisChaser As Object = chasers(index)
 
@@ -501,7 +513,192 @@ Public Class Form1
             If pbChase.Bounds.IntersectsWith(PictureBox24.Bounds) Then
                 pbChase.Left = pbChase.Left + 1
             End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox1.Bounds) Then
+                pbChace.Left = pbChace.Left - 1
+            End If
+
+            If pbChase.Bounds.IntersectsWith(PictureBox2.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+            'add more to stuff
+            If pbChace.Bounds.IntersectsWith(PictureBox3.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox4.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChase.Bounds.IntersectsWith(PictureBox5.Bounds) Then
+                pbChace.Top = pbChace.Top + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox6.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox7.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox8.Bounds) Then
+                pbChace.Top = pbChace.Top + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox9.Bounds) Then
+                pbChace.Top = pbChace.Top + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox10.Bounds) Then
+                pbChace.Top = pbChace.Top + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox11.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox13.Bounds) Then
+                pbChace.Top = pbChace.Top - 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox14.Bounds) Then
+                pbChace.Left = pbChace.Left - 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox15.Bounds) Then
+                pbChace.Top = pbChace.Top + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox16.Bounds) Then
+                pbChace.Top = pbChace.Top + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox17.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox18.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox19.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox20.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox21.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox22.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox23.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChace.Bounds.IntersectsWith(PictureBox24.Bounds) Then
+                pbChace.Left = pbChace.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox1.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox2.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+            'add more to stuff
+            If pbChaze.Bounds.IntersectsWith(PictureBox3.Bounds) Then
+                pbChaze.Top = pbChaze.Top + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox4.Bounds) Then
+                pbChaze.Top = pbChaze.Top + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox5.Bounds) Then
+                pbChaze.Top = pbChaze.Top + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox6.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox7.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox8.Bounds) Then
+                pbChaze.Top = pbChaze.Top + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox9.Bounds) Then
+                pbChaze.Top = pbChaze.Top + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox10.Bounds) Then
+                pbChaze.Top = pbChaze.Top + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox11.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox13.Bounds) Then
+                pbChaze.Top = pbChaze.Top - 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox14.Bounds) Then
+                pbChaze.Left = pbChaze.Left - 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox15.Bounds) Then
+                pbChaze.Top = pbChaze.Top + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox16.Bounds) Then
+                pbChaze.Top = pbChaze.Top + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox17.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox18.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox19.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox20.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox21.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox22.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox23.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
+
+            If pbChaze.Bounds.IntersectsWith(PictureBox24.Bounds) Then
+                pbChaze.Left = pbChaze.Left + 1
+            End If
         Next
     End Sub
+
 
 End Class
