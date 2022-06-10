@@ -1,9 +1,9 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.pbHero = New System.Windows.Forms.PictureBox()
@@ -54,6 +54,8 @@ Partial Class Form1
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.PictureBox24 = New System.Windows.Forms.PictureBox()
         Me.pbChase = New System.Windows.Forms.PictureBox()
+        Me.pbChace = New System.Windows.Forms.PictureBox()
+        Me.pbChaze = New System.Windows.Forms.PictureBox()
         CType(Me.pbHero, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +85,8 @@ Partial Class Form1
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbChase, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbChace, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbChaze, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbHero
@@ -102,9 +106,9 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Red
-        Me.PictureBox1.Location = New System.Drawing.Point(686, 52)
+        Me.PictureBox1.Location = New System.Drawing.Point(686, 68)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(54, 341)
+        Me.PictureBox1.Size = New System.Drawing.Size(54, 325)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
@@ -251,9 +255,9 @@ Partial Class Form1
         'PictureBox14
         '
         Me.PictureBox14.BackColor = System.Drawing.Color.Red
-        Me.PictureBox14.Location = New System.Drawing.Point(818, 52)
+        Me.PictureBox14.Location = New System.Drawing.Point(818, 68)
         Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(54, 120)
+        Me.PictureBox14.Size = New System.Drawing.Size(54, 104)
         Me.PictureBox14.TabIndex = 17
         Me.PictureBox14.TabStop = False
         '
@@ -356,11 +360,31 @@ Partial Class Form1
         Me.pbChase.TabIndex = 28
         Me.pbChase.TabStop = False
         '
+        'pbChace
+        '
+        Me.pbChace.BackColor = System.Drawing.Color.Maroon
+        Me.pbChace.Location = New System.Drawing.Point(755, 15)
+        Me.pbChace.Name = "pbChace"
+        Me.pbChace.Size = New System.Drawing.Size(42, 40)
+        Me.pbChace.TabIndex = 29
+        Me.pbChace.TabStop = False
+        '
+        'pbChaze
+        '
+        Me.pbChaze.BackColor = System.Drawing.Color.Maroon
+        Me.pbChaze.Location = New System.Drawing.Point(166, 261)
+        Me.pbChaze.Name = "pbChaze"
+        Me.pbChaze.Size = New System.Drawing.Size(42, 40)
+        Me.pbChaze.TabIndex = 30
+        Me.pbChaze.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1527, 545)
+        Me.Controls.Add(Me.pbChaze)
+        Me.Controls.Add(Me.pbChace)
         Me.Controls.Add(Me.pbChase)
         Me.Controls.Add(Me.PictureBox24)
         Me.Controls.Add(Me.PictureBox23)
@@ -421,6 +445,8 @@ Partial Class Form1
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbChase, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbChace, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbChaze, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -456,5 +482,7 @@ Partial Class Form1
     Friend WithEvents PictureBox23 As PictureBox
     Friend WithEvents PictureBox24 As PictureBox
     Friend WithEvents pbChase As PictureBox
+    Friend WithEvents pbChace As PictureBox
+    Friend WithEvents pbChaze As PictureBox
 End Class
 
