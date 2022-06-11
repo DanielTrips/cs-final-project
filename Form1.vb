@@ -198,6 +198,12 @@ Public Class Form1
             Application.Exit()
         End If
 
+        If pbHero.Bounds.IntersectsWith(pbChase.Bounds) Then
+            pbHero.Visible = False
+            MessageBox.Show("GAME OVER")
+            Application.Exit()
+        End If
+
         'if player hits the blue box they win
         If pbHero.Bounds.IntersectsWith(pbWin.Bounds) Then
             pbHero.Visible = False
@@ -279,7 +285,7 @@ Public Class Form1
             End If
 
             If thisChaser.Bounds.IntersectsWith(PictureBox11.Bounds) Then
-                thisChaser.Top = thisChaser.Top - 1
+                thisChaser.Left = thisChaser.Left - 1
             End If
 
             If thisChaser.Bounds.IntersectsWith(PictureBox13.Bounds) Then
@@ -570,6 +576,7 @@ Public Class Form1
                 pbChace.Top = pbChace.Top + 1
             End If
 
+            'this one right here needs to be fixed
             If pbChace.Bounds.IntersectsWith(PictureBox16.Bounds) Then
                 pbChace.Top = pbChace.Top + 1
             End If
