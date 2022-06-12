@@ -56,6 +56,7 @@ Partial Class Form1
         Me.pbChase = New System.Windows.Forms.PictureBox()
         Me.pbChace = New System.Windows.Forms.PictureBox()
         Me.pbChaze = New System.Windows.Forms.PictureBox()
+        Me.pbSpeed = New System.Windows.Forms.PictureBox()
         CType(Me.pbHero, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,6 +88,7 @@ Partial Class Form1
         CType(Me.pbChase, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbChace, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbChaze, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbSpeed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbHero
@@ -378,11 +380,21 @@ Partial Class Form1
         Me.pbChaze.TabIndex = 30
         Me.pbChaze.TabStop = False
         '
+        'pbSpeed
+        '
+        Me.pbSpeed.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbSpeed.Location = New System.Drawing.Point(965, 465)
+        Me.pbSpeed.Name = "pbSpeed"
+        Me.pbSpeed.Size = New System.Drawing.Size(76, 70)
+        Me.pbSpeed.TabIndex = 31
+        Me.pbSpeed.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1527, 545)
+        Me.Controls.Add(Me.pbSpeed)
         Me.Controls.Add(Me.pbChaze)
         Me.Controls.Add(Me.pbChace)
         Me.Controls.Add(Me.pbChase)
@@ -447,6 +459,7 @@ Partial Class Form1
         CType(Me.pbChase, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbChace, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbChaze, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbSpeed, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -484,5 +497,6 @@ Partial Class Form1
     Friend WithEvents pbChase As PictureBox
     Friend WithEvents pbChace As PictureBox
     Friend WithEvents pbChaze As PictureBox
+    Friend WithEvents pbSpeed As PictureBox
 End Class
 
