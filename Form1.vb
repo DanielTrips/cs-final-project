@@ -102,7 +102,7 @@ Public Class Form1
             MessageBox.Show("GAME OVER")
             Application.Exit()
         End If
-        If pbHero.Bounds.IntersectsWith(pbChaser.Bounds) Or pbHero.Bounds.IntersectsWith(pbChasi.Bounds) Then
+        If pbHero.Bounds.IntersectsWith(pbChaser.Bounds) Then
             pbHero.Visible = False
             MessageBox.Show("GAME OVER")
             Application.Exit()
@@ -203,7 +203,10 @@ Public Class Form1
             MessageBox.Show("GAME OVER")
             Application.Exit()
         End If
-
+        'fix this
+        If pbHero.Bounds.IntersectsWith(pbSpeed.Bounds) Then
+            pbHero.Top = pbHero.Top - 50 And pbHero.Left = pbHero.Left - 90
+        End If
         'if player hits the blue box they win
         If pbHero.Bounds.IntersectsWith(pbWin.Bounds) Then
             pbHero.Visible = False
@@ -212,15 +215,7 @@ Public Class Form1
         End If
 
     End Sub
-    Private Function checkCollision(heroguy As Object, chaserguy As Object) As Boolean
 
-        'my collision function that never ended up being used
-        Return pbHero.Top + pbHero.Size.Height <= pbChaser.Top - pbChaser.Size.Height And
-            pbHero.Top - pbHero.Size.Height >= pbChaser.Top + pbChaser.Size.Height And
-           pbHero.Left + pbHero.Size.Width <= pbChaser.Left - pbChaser.Size.Width And
-          pbHero.Left + pbHero.Size.Width <= pbChaser.Left - pbChaser.Size.Width
-
-    End Function
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick, MyBase.KeyDown
         ' code for chaser1
         Dim hero As Integer = pbHero.Top
@@ -578,7 +573,7 @@ Public Class Form1
 
             'this one right here needs to be fixed
             If pbChace.Bounds.IntersectsWith(PictureBox16.Bounds) Then
-                pbChace.Top = pbChace.Top + 1
+                pbChace.Top = pbChace.Top - 1
             End If
 
             If pbChace.Bounds.IntersectsWith(PictureBox17.Bounds) Then
